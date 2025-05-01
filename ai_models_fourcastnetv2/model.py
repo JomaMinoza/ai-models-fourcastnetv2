@@ -28,8 +28,9 @@ class FourCastNetv2(Model):
     #grid = [0.25, 0.25]
     
     grid = [0.001, 0.001]  # Grid cells of ~100-110m
-    area = [21.0, 116.0, 4.5, 127.0]  # [North, West, South, East]
-
+    # Extended Philippines area with typhoon genesis region in the Pacific
+    area = [21.0, 116.0, 4.5, 150.0]  # [North, West, South, East]
+    
     param_sfc = ["10u", "10v", "2t", "sp", "msl", "tcwv", "100u", "100v"]
 
     param_level_pl = (

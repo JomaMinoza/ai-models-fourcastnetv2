@@ -25,9 +25,8 @@ class FourCastNetv2(Model):
 
     # Input
     #area = [90, 0, -90, 360 - 0.25]
-    #grid = [0.25, 0.25]
+    grid = [0.25, 0.25]
     
-    grid = [0.001, 0.001]  # Grid cells of ~100-110m
     # Extended Philippines area with typhoon genesis region in the Pacific
     area = [21.0, 116.0, 4.5, 150.0]  # [North, West, South, East]
     

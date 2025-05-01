@@ -24,8 +24,11 @@ class FourCastNetv2(Model):
     download_files = ["weights.tar", "global_means.npy", "global_stds.npy"]
 
     # Input
-    area = [90, 0, -90, 360 - 0.25]
-    grid = [0.25, 0.25]
+    #area = [90, 0, -90, 360 - 0.25]
+    #grid = [0.25, 0.25]
+    
+    grid = [0.001, 0.001]  # Grid cells of ~100-110m
+    area = [21.0, 116.0, 4.5, 127.0]  # [North, West, South, East]
 
     param_sfc = ["10u", "10v", "2t", "sp", "msl", "tcwv", "100u", "100v"]
 
@@ -118,7 +121,7 @@ class FourCastNetv2(Model):
 
         self.n_lat = 721
         self.n_lon = 1440
-        self.hour_steps = 6
+        self.hour_steps = 24
 
         self.backbone_channels = len(self.ordering)
 
